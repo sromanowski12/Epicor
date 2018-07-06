@@ -32,47 +32,60 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Epicor.App.Version">
-      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client2\Client\Epicor.App.Version.dll</HintPath>
+    <Reference Include="Epicor.App.Version, Version=10.2.100.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client\Client\Epicor.App.Version.dll</HintPath>
     </Reference>
-    <Reference Include="Epicor.Ice.Solution.Handlers.Common">
-      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client2\Client\Epicor.Ice.Solution.Handlers.Common.dll</HintPath>
+    <Reference Include="Epicor.Ice.Solution.Handlers.Common, Version=3.2.100.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client\Client\Epicor.Ice.Solution.Handlers.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Epicor.Ice.Version">
-      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client2\Client\Epicor.Ice.Version.dll</HintPath>
+    <Reference Include="Epicor.ServiceModel, Version=3.2.100.0, Culture=neutral, PublicKeyToken=37a5ccb872c00aec, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client\Client\Epicor.ServiceModel.dll</HintPath>
     </Reference>
-    <Reference Include="Epicor.ServiceModel">
-      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client2\Client\Epicor.ServiceModel.dll</HintPath>
+    <Reference Include="Ice.Adapters.DynamicQuery, Version=3.2.100.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client\Client\Ice.Adapters.DynamicQuery.dll</HintPath>
     </Reference>
-    <Reference Include="Ice.Adapters.DynamicQuery">
-      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client2\Client\Ice.Adapters.DynamicQuery.dll</HintPath>
+    <Reference Include="Ice.Contracts.BO.BAQDesigner, Version=3.2.100.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client\Client\Ice.Contracts.BO.BAQDesigner.dll</HintPath>
     </Reference>
-    <Reference Include="Ice.Contracts.BO.BAQDesigner">
-      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client2\Client\Ice.Contracts.BO.BAQDesigner.dll</HintPath>
+    <Reference Include="Ice.Contracts.BO.DynamicQuery, Version=3.2.100.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client\Client\Ice.Contracts.BO.DynamicQuery.dll</HintPath>
     </Reference>
-    <Reference Include="Ice.Contracts.BO.DynamicQuery">
-      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client2\Client\Ice.Contracts.BO.DynamicQuery.dll</HintPath>
+    <Reference Include="Ice.Contracts.BO.GenXData, Version=3.2.100.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client\Client\Ice.Contracts.BO.GenXData.dll</HintPath>
     </Reference>
-    <Reference Include="Ice.Contracts.BO.GenXData">
-      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client2\Client\Ice.Contracts.BO.GenXData.dll</HintPath>
+    <Reference Include="Ice.Contracts.Lib.BOReader, Version=3.2.100.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client\Client\Ice.Contracts.Lib.BOReader.dll</HintPath>
     </Reference>
-    <Reference Include="Ice.Contracts.Lib.BOReader">
-      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client2\Client\Ice.Contracts.Lib.BOReader.dll</HintPath>
+    <Reference Include="Ice.Contracts.Lib.ClientCache, Version=3.2.100.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client\Client\Ice.Contracts.Lib.ClientCache.dll</HintPath>
     </Reference>
-    <Reference Include="Ice.Contracts.Lib.ClientCache">
-      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client2\Client\Ice.Contracts.Lib.ClientCache.dll</HintPath>
+    <Reference Include="Ice.Core.Session, Version=3.2.100.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client\Client\Ice.Core.Session.dll</HintPath>
     </Reference>
-    <Reference Include="Ice.Core.Session">
-      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client2\Client\Ice.Core.Session.dll</HintPath>
+    <Reference Include="Ice.Lib.BAQ.Shared, Version=3.2.100.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client\Client\Ice.Lib.BAQ.Shared.dll</HintPath>
     </Reference>
-    <Reference Include="Ice.Lib.BAQ.Shared">
-      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client2\Client\Ice.Lib.BAQ.Shared.dll</HintPath>
+    <Reference Include="Ice.Lib.Deployment, Version=3.2.100.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client\Client\Ice.Lib.Deployment.dll</HintPath>
     </Reference>
-    <Reference Include="Ice.Lib.Deployment">
-      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client2\Client\Ice.Lib.Deployment.dll</HintPath>
+    <Reference Include="Ice.Lib.EpiClientLib, Version=3.2.100.0, Culture=neutral, PublicKeyToken=5d3fa3c7105d7992, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client\Client\Ice.Lib.EpiClientLib.dll</HintPath>
     </Reference>
-    <Reference Include="Ice.Lib.EpiClientLib">
-      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client2\Client\Ice.Lib.EpiClientLib.dll</HintPath>
+    <Reference Include="Ice.UI.Bpm.Core">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.2Client\Client\Ice.UI.Bpm.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
