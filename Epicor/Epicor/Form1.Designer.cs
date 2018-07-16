@@ -35,24 +35,24 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.resourcesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sendToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newTaskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.printPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.outlookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newTaskToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resourcesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iNSERTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uPDATEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dELETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sendToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newTaskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.outlookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newTaskToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -60,6 +60,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -128,60 +130,6 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.exitToolStripMenuItem.Text = "Open";
             // 
-            // optionsToolStripMenuItem
-            // 
-            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
-            this.optionsToolStripMenuItem.Text = "Options";
-            // 
-            // resourcesToolStripMenuItem
-            // 
-            this.resourcesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exportToolStripMenuItem,
-            this.sendToToolStripMenuItem,
-            this.outlookToolStripMenuItem});
-            this.resourcesToolStripMenuItem.Name = "resourcesToolStripMenuItem";
-            this.resourcesToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
-            this.resourcesToolStripMenuItem.Text = "Resources";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(381, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 4;
-            // 
-            // exportToolStripMenuItem
-            // 
-            this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.excelToolStripMenuItem,
-            this.iNSERTToolStripMenuItem,
-            this.uPDATEToolStripMenuItem,
-            this.dELETEToolStripMenuItem});
-            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.exportToolStripMenuItem.Text = "Epicor";
-            // 
-            // excelToolStripMenuItem
-            // 
-            this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
-            this.excelToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.excelToolStripMenuItem.Text = "SELECT";
-            // 
-            // sendToToolStripMenuItem
-            // 
-            this.sendToToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newTaskToolStripMenuItem});
-            this.sendToToolStripMenuItem.Name = "sendToToolStripMenuItem";
-            this.sendToToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.sendToToolStripMenuItem.Text = "Excel";
-            // 
-            // newTaskToolStripMenuItem
-            // 
-            this.newTaskToolStripMenuItem.Name = "newTaskToolStripMenuItem";
-            this.newTaskToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.newTaskToolStripMenuItem.Text = "New";
-            // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
@@ -212,26 +160,38 @@
             this.exitToolStripMenuItem2.Size = new System.Drawing.Size(216, 26);
             this.exitToolStripMenuItem2.Text = "Exit";
             // 
-            // outlookToolStripMenuItem
+            // optionsToolStripMenuItem
             // 
-            this.outlookToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newEmailToolStripMenuItem,
-            this.newTaskToolStripMenuItem2});
-            this.outlookToolStripMenuItem.Name = "outlookToolStripMenuItem";
-            this.outlookToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.outlookToolStripMenuItem.Text = "Outlook";
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.optionsToolStripMenuItem.Text = "Options";
             // 
-            // newEmailToolStripMenuItem
+            // resourcesToolStripMenuItem
             // 
-            this.newEmailToolStripMenuItem.Name = "newEmailToolStripMenuItem";
-            this.newEmailToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.newEmailToolStripMenuItem.Text = "New Email";
+            this.resourcesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportToolStripMenuItem,
+            this.sendToToolStripMenuItem,
+            this.outlookToolStripMenuItem});
+            this.resourcesToolStripMenuItem.Name = "resourcesToolStripMenuItem";
+            this.resourcesToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+            this.resourcesToolStripMenuItem.Text = "Resources";
             // 
-            // newTaskToolStripMenuItem2
+            // exportToolStripMenuItem
             // 
-            this.newTaskToolStripMenuItem2.Name = "newTaskToolStripMenuItem2";
-            this.newTaskToolStripMenuItem2.Size = new System.Drawing.Size(216, 26);
-            this.newTaskToolStripMenuItem2.Text = "New Task";
+            this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.excelToolStripMenuItem,
+            this.iNSERTToolStripMenuItem,
+            this.uPDATEToolStripMenuItem,
+            this.dELETEToolStripMenuItem});
+            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.exportToolStripMenuItem.Text = "Epicor";
+            // 
+            // excelToolStripMenuItem
+            // 
+            this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
+            this.excelToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.excelToolStripMenuItem.Text = "SELECT";
             // 
             // iNSERTToolStripMenuItem
             // 
@@ -251,12 +211,54 @@
             this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.dELETEToolStripMenuItem.Text = "DELETE";
             // 
+            // sendToToolStripMenuItem
+            // 
+            this.sendToToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newTaskToolStripMenuItem});
+            this.sendToToolStripMenuItem.Name = "sendToToolStripMenuItem";
+            this.sendToToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.sendToToolStripMenuItem.Text = "Excel";
+            // 
+            // newTaskToolStripMenuItem
+            // 
+            this.newTaskToolStripMenuItem.Name = "newTaskToolStripMenuItem";
+            this.newTaskToolStripMenuItem.Size = new System.Drawing.Size(114, 26);
+            this.newTaskToolStripMenuItem.Text = "New";
+            // 
+            // outlookToolStripMenuItem
+            // 
+            this.outlookToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newEmailToolStripMenuItem,
+            this.newTaskToolStripMenuItem2});
+            this.outlookToolStripMenuItem.Name = "outlookToolStripMenuItem";
+            this.outlookToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.outlookToolStripMenuItem.Text = "Outlook";
+            // 
+            // newEmailToolStripMenuItem
+            // 
+            this.newEmailToolStripMenuItem.Name = "newEmailToolStripMenuItem";
+            this.newEmailToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
+            this.newEmailToolStripMenuItem.Text = "New Email";
+            // 
+            // newTaskToolStripMenuItem2
+            // 
+            this.newTaskToolStripMenuItem2.Name = "newTaskToolStripMenuItem2";
+            this.newTaskToolStripMenuItem2.Size = new System.Drawing.Size(155, 26);
+            this.newTaskToolStripMenuItem2.Text = "New Task";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(381, 48);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 4;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(965, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(983, 33);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(123, 65);
+            this.pictureBox1.Size = new System.Drawing.Size(105, 65);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -311,11 +313,30 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "BAQ:";
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(580, 74);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(230, 24);
+            this.comboBox2.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(502, 79);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 17);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Operation:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 521);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
@@ -373,6 +394,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label4;
     }
 }
 
