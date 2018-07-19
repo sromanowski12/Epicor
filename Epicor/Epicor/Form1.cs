@@ -18,6 +18,8 @@ using Epicor.Utilities;
 using Ice.BO.DynamicQuery;
 using System.Runtime;
 using System.Windows;
+using System.Runtime.InteropServices;
+using Excel = Microsoft.Office.Interop.Excel;
 
 
 namespace Epicor
@@ -27,6 +29,114 @@ namespace Epicor
         public Form1()
         {
             InitializeComponent();
+
+            List<string> ops = new List<string>();
+            Session epiSession;
+            epiSession = new Session("seth.romanowski", "Baseball33", "net.tcp://LW-EPICOR-APP/ERP102200", Session.LicenseType.Default, @"C:\Epicor\ERP10.2Client\Client\config\ERP102200.sysconfig");
+            ILauncher oTrans = null;
+            if (epiSession != null)
+            {
+                MessageBox.Show("Connected!");
+                oTrans = new ILauncher(epiSession);
+            }
+
+            try
+            {
+                string BAQName = "OpMaster-Seth";
+                Ice.BO.QueryExecutionDataSet ds = new Ice.BO.QueryExecutionDataSet();
+                // Use Business Object Directly
+                Ice.Proxy.BO.DynamicQueryImpl dynamicQuery = WCFServiceSupport.CreateImpl<Ice.Proxy.BO.DynamicQueryImpl>((Ice.Core.Session)oTrans.Session, Epicor.ServiceModel.Channels.ImplBase<Ice.Contracts.DynamicQuerySvcContract>.UriPath);
+                System.Data.DataSet results = dynamicQuery.ExecuteByID(BAQName, ds);
+                // Lets Loop through our results
+                if (results.Tables["Results"].Rows.Count > 0)
+                {
+                    foreach (DataRow item in results.Tables["Results"].Rows)
+                    {
+                        // In E9 you used TableName.Column in E10 it is TableName_Column
+                        comboBox2.Items.Add(new {Text=item["OpMaster_OpDesc"].ToString(),Value= item["OpMaster_OpDesc"].ToString()});
+
+                    }
+                }
+                comboBox2.DisplayMember = "Text";
+                comboBox2.ValueMember = "Value";
+
+                string BAQName2 = "zResourceGroupList";
+                Ice.BO.QueryExecutionDataSet ds2 = new Ice.BO.QueryExecutionDataSet();
+                // Use Business Object Directly
+                Ice.Proxy.BO.DynamicQueryImpl dynamicQuery2 = WCFServiceSupport.CreateImpl<Ice.Proxy.BO.DynamicQueryImpl>((Ice.Core.Session)oTrans.Session, Epicor.ServiceModel.Channels.ImplBase<Ice.Contracts.DynamicQuerySvcContract>.UriPath);
+                System.Data.DataSet results2 = dynamicQuery.ExecuteByID(BAQName2, ds);
+                // Lets Loop through our results
+                if (results2.Tables["Results"].Rows.Count > 0)
+                {
+                    foreach (DataRow item in results2.Tables["Results"].Rows)
+                    {
+                        // In E9 you used TableName.Column in E10 it is TableName_Column
+                        comboBox3.Items.Add(new { Text = item["resourcegroup_description"].ToString(), Value = item["resourcegroup_description"].ToString() });
+
+                    }
+                }
+                comboBox3.DisplayMember = "Text";
+                comboBox3.ValueMember = "Value";
+
+
+                string BAQName3 = "zResourceList";
+                Ice.BO.QueryExecutionDataSet ds3 = new Ice.BO.QueryExecutionDataSet();
+                // Use Business Object Directly
+                Ice.Proxy.BO.DynamicQueryImpl dynamicQuery3 = WCFServiceSupport.CreateImpl<Ice.Proxy.BO.DynamicQueryImpl>((Ice.Core.Session)oTrans.Session, Epicor.ServiceModel.Channels.ImplBase<Ice.Contracts.DynamicQuerySvcContract>.UriPath);
+                System.Data.DataSet results3 = dynamicQuery.ExecuteByID(BAQName3, ds);
+                // Lets Loop through our results
+                if (results3.Tables["Results"].Rows.Count > 0)
+                {
+                    foreach (DataRow item in results3.Tables["Results"].Rows)
+                    {
+                        // In E9 you used TableName.Column in E10 it is TableName_Column
+                        comboBox4.Items.Add(new { Text = item["Resource_Description"].ToString(), Value = item["Resource_Description"].ToString() });
+
+                    }
+                }
+                comboBox4.DisplayMember = "Text";
+                comboBox4.ValueMember = "Value";
+
+                string BAQName4 = "ProductGroups-Seth";
+                Ice.BO.QueryExecutionDataSet ds4 = new Ice.BO.QueryExecutionDataSet();
+                // Use Business Object Directly
+                Ice.Proxy.BO.DynamicQueryImpl dynamicQuery4 = WCFServiceSupport.CreateImpl<Ice.Proxy.BO.DynamicQueryImpl>((Ice.Core.Session)oTrans.Session, Epicor.ServiceModel.Channels.ImplBase<Ice.Contracts.DynamicQuerySvcContract>.UriPath);
+                System.Data.DataSet results4 = dynamicQuery.ExecuteByID(BAQName4, ds);
+                // Lets Loop through our results
+                if (results4.Tables["Results"].Rows.Count > 0)
+                {
+                    foreach (DataRow item in results4.Tables["Results"].Rows)
+                    {
+                        // In E9 you used TableName.Column in E10 it is TableName_Column
+                        comboBox5.Items.Add(new { Text = item["ProdGrup_Description"].ToString(), Value = item["ProdGrup_Description"].ToString() });
+
+                    }
+                }
+                comboBox5.DisplayMember = "Text";
+                comboBox5.ValueMember = "Value";
+
+                string BAQName5 = "PartClasses-Seth";
+                Ice.BO.QueryExecutionDataSet ds5 = new Ice.BO.QueryExecutionDataSet();
+                // Use Business Object Directly
+                Ice.Proxy.BO.DynamicQueryImpl dynamicQuery5 = WCFServiceSupport.CreateImpl<Ice.Proxy.BO.DynamicQueryImpl>((Ice.Core.Session)oTrans.Session, Epicor.ServiceModel.Channels.ImplBase<Ice.Contracts.DynamicQuerySvcContract>.UriPath);
+                System.Data.DataSet results5 = dynamicQuery.ExecuteByID(BAQName5, ds);
+                // Lets Loop through our results
+                if (results5.Tables["Results"].Rows.Count > 0)
+                {
+                    foreach (DataRow item in results5.Tables["Results"].Rows)
+                    {
+                        // In E9 you used TableName.Column in E10 it is TableName_Column
+                        comboBox6.Items.Add(new { Text = item["PartClass_Description"].ToString(), Value = item["PartClass_Description"].ToString() });
+
+                    }
+                }
+                comboBox6.DisplayMember = "Text";
+                comboBox6.ValueMember = "Value";
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -201,7 +311,51 @@ namespace Epicor
             {
                 MessageBox.Show(ex.ToString());
             }
-       
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Excel.Application xl = null;
+            Excel.Workbooks xlWbs = null;
+            Excel.Workbook xlWb = null;
+            Excel.Sheets xlSheets = null;
+            Excel.Worksheet xlSheet = null;
+            Excel.Range xlRng = null;
+
+            xl = new Excel.Application();
+
+            xlWbs = xl.Workbooks;
+            xlWb = xlWbs.Add();
+            xlSheets = xlWb.Sheets;
+            xlSheet = xlSheets.Item[1];
+
+            xl.Visible = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string template;
+            string file;
+            template = comboBox9.ValueMember;
+            file = @"\\lw-dc02\public\Seth\Resources\Reports\Templates\Production Hours.xlsm";
+
+            Excel.Application xl = null;
+            Excel.Workbooks xlWbs = null;
+            Excel.Workbook xlWb = null;
+            Excel.Sheets xlSheets = null;
+            Excel.Worksheet xlSheet = null;
+            Excel.Range xlRng = null;
+
+            xl = new Excel.Application();
+
+            xlWbs = xl.Workbooks;
+            xlWb = xlWbs.Open(file);
+            xlSheets = xlWb.Sheets;
+            xlSheet = xlSheets.Item[1];
+
+            xl.Visible = true;
         }
     }
+    
 }
